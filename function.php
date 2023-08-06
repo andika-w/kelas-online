@@ -131,6 +131,7 @@ function bayar($data){
     global $conn;
     
     $nama = htmlspecialchars($data["nama"]);
+    $kode = htmlspecialchars($data["kode"]);
     $kelas = htmlspecialchars($data["kelas"]);
     $paket = htmlspecialchars($data["paket"]);
     $harga = htmlspecialchars($data["harga"]);
@@ -142,7 +143,7 @@ function bayar($data){
         $status = "proses";
     }
 
-    $query = "INSERT INTO transaksi VALUES ('','$nama','$kelas','$paket','$harga','$bayar','$status')";
+    $query = "INSERT INTO transaksi VALUES ('','$kode','$nama','$kelas','$paket','$harga','$bayar','$status')";
 
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);

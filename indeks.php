@@ -75,8 +75,10 @@ if (isset($_POST["cari"])) {
             <?php $no ++; ?>
             </tbody>
         </table>
-        <a href="tambah.php">tambah</a>
-        <a href="kelas/kelas.php">kelas</a>
-        <a href="pembayaran/bayar.php">pembayaran</a>
+        <ul>
+            <li><a href="tambah.php">tambah siswa</a></li>
+            <li><a href="kelas/kelas.php">kelas</a></li>
+            <li><a href="pembayaran/bayar.php">pembayaran</a></li>
+        </ul>
 </body>
 </html>

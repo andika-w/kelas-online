@@ -61,19 +61,30 @@ if (isset($_POST["cari"])) {
                         $status = "proses";
                     }
             ?>
-	                <tr>
-	                    <td><?=$no?></td>
-	                    <td>K00<?=$row["id"];?></td>
-	                    <td><?=$row["nama"];?></td>
-	                    <td><?=$row["paket"];?></td>
-	                    <?php
+                        <tr>
+                        <td><?=$no?></td>
+                        <td>K00<?=$row["id"];?></td>
+                        <td><?=$row["nama"];?></td>
+                        <td><?=$row["paket"];?></td>
+                            <?php
                             $id_kelas = $row['id_kelas'];
                             $kelas = query("SELECT nama_kelas, harga from kelas where id =  $id_kelas");
                             foreach ($kelas as $rowkelas):
+                            ?>
+                        <td><?=$rowkelas["nama_kelas"];?></td>
+                        <?php
+
+                        if ($row['paket'] == "1 tahun") {
+                            $paket = 1 ;
+                        } if ($row['paket'] == "2 tahun"){
+                            $paket = 2;
+                        } if ($row['paket'] == "3 tahun"){
+                            $paket = 3;
+                        }
+                        $harga = $rowkelas['harga'] * $paket;
                         ?>
-	                        <td><?=$rowkelas["nama_kelas"];?></td>
-	                        <td><?=$rowkelas["harga"];?></td>
-	                        <?php endforeach;?>
+                        <td><?= $harga ?></td>
+                            <?php endforeach;?>
                         <td><?= $status?></td>
                         <td>
                         <a href="proses.php?id=<?=$row["id"];?>">proses</a>

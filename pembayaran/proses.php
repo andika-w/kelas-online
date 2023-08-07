@@ -79,7 +79,7 @@ if (isset($_POST["submit"])) {
         <button type="submit" name="submit">bayar</button>
     </form>
     <br>
-    <a href="indeks.php">kembali</a>
+    <a href="bayar.php">kembali</a>
 </body>
 
 </html>

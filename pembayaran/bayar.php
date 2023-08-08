@@ -87,7 +87,13 @@ if (isset($_POST["cari"])) {
                             <?php endforeach;?>
                         <td><?= $status?></td>
                         <td>
-                        <a href="proses.php?id=<?=$row["id"];?>">proses</a>
+                            <?php
+                            if($status == "lunas"){
+                            echo "selesai";
+                            } if($status == "proses"){
+                            echo '<a href="proses.php?id=' . $row["id"] . '">bayar</a>';
+                            }
+                            ?>
                     </td>
                 </tr>
                 <?php $no++;?>

@@ -32,15 +32,22 @@ if (isset($_POST["register"])) {
         <ul>
             <li>
                 <label for="username">username :</label>
-                <input type="text" name="username" id="username" autocomplete="off">
+                <input type="text" name="username" id="username" autocomplete="off" required>
             </li>
             <li>
                 <label for="password">password :</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </li>
             <li>
                 <label for="password2">konfirrmasi password :</label>
-                <input type="password" name="password2" id="password2">
+                <input type="password" name="password2" id="password2" required>
+            </li>
+            <li>
+            <label for="status">status :</label>
+                    <select name="status" id="status">
+                            <option value="admin">admin</option>
+                            <option value="user">user</option>
+                    </select>
             </li>
             <li>
                 <button type="submit" name="register">

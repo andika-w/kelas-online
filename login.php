@@ -67,5 +67,6 @@ if (isset($_POST["login"])) {
             </li>
         </ul>
     </form>
+    <a href="regis.php">belum ada akun ?</a>
 </body>
 </html>

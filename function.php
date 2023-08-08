@@ -108,10 +108,12 @@ function regis($data)
     global $conn;
 
     $username = strtolower(stripslashes($data["username"]));
-    $password = mysqli_real_escape_string($conn, $data["password"]);
+    $passwordtes = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
+    $status = mysqli_real_escape_string($conn, $data["status"]);
 
-    if ($password !== $password2) {
+
+    if ($passwordtes !== $password2) {
         echo "  
         <script>
         alert('konfirmasi password salah ');
@@ -121,9 +123,9 @@ function regis($data)
 
 
 
-    $passwordNew = md5($password);
+    $password = md5($passwordtes);
 
-    mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$passwordNew')");
+    mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', '$status')");
     return mysqli_affected_rows($conn);
 }
 

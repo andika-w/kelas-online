@@ -32,7 +32,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link "href="pages/autentikasi/logout.php">Logout</a>
+        <a class="nav-link "href="<?= $url ?>pages/autentikasi/logout.php">Logout</a>
       </li>
 
 

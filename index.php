@@ -2,9 +2,9 @@
 
 session_start();
 if (!isset($_SESSION['level'])) {
-    header("Location: pages/autentikasi/login.php");
+    header("Location: autentikasi/login.php");
 } elseif ($_SESSION['level'] == "user") {
-    header("Location: user/halaman_user.php");
+    header("Location: ..user/halaman_user.php");
 } 
 
 require 'pages/function.php';
@@ -22,8 +22,7 @@ if (isset($_POST["cari"])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "inc/head.php"?>
-
+<?php include "inc/head.php" ?>
 
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -139,7 +138,6 @@ if (isset($_POST["cari"])) {
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
-<?php include "inc/script.php"  ?>
+<?php include "inc/script.php" ?>
 </body>
 </html>

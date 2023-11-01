@@ -7,7 +7,7 @@ if (!isset($_SESSION['level'])) {
     header("Location: user/halaman_user.php");
 }
 
-require '../function.php';
+require '../pages/function.php';
 $siswa = query("SELECT * FROM siswa");
 
 if (isset($_POST["cari"])) {

@@ -5,7 +5,7 @@ if (!isset($_SESSION['level'])) {
 } elseif ($_SESSION['level'] == "user") {
     header("Location: user/halaman_user.php");
 }
-require '../function.php';
+require '../pages/function.php';
 
 $id = $_GET["id"];
 $ssw = query("SELECT * FROM siswa WHERE id = $id")[0];

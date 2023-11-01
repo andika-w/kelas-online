@@ -26,7 +26,6 @@ $kelas = query("SELECT * FROM kelas");
                 <th>no</th>
                 <th>kode</th>
                 <th>kelas</th>
-                <th>harga</th>
                 <th>aksi</th>
             </tr>
             </thead>

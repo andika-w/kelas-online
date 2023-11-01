@@ -40,38 +40,6 @@ if (isset($_POST["login"])) {
 
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <form action="" method="post">
-        <h2>login sebagai admin</h2>
-        <ul>
-            <li>
-                <label for="username">username :</label>
-                <input type="text" name="username" id="username" autocomplete="off" required>
-            </li>
-            <li>
-                <label for="password">password :</label>
-                <input type="password" name="password" id="password" autocomplete="off" required>
-            </li>
-            <li>
-                <button type="submit" name="login">
-                    login
-                </button>
-            </li>
-        </ul>
-    </form>
-    <a href="regis.php">belum ada akun ?</a>
-</body>
-</html> -->
-
-
 
 
 <!DOCTYPE html>
@@ -93,7 +61,7 @@ if (isset($_POST["login"])) {
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
+  <div class="card card card-primary">
     <div class="card-header text-center">
       <a href="../../index2.html" class="h1"><b>Kelas</b>Online</a>
     </div>
@@ -119,12 +87,6 @@ if (isset($_POST["login"])) {
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
@@ -134,11 +96,8 @@ if (isset($_POST["login"])) {
         </div>
       </form>
 
-      <!-- <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p> -->
       <p class="mb-0">
-        <a href="regis.php" class="text-center">Register a new membership</a>
+        <a href="regis.php" class="text-center">Daftar akun</a>
       </p>
     </div>
     <!-- /.card-body -->

@@ -15,7 +15,7 @@ if (!isset($_SESSION['level'])) {
             echo "
         <script>
             alert('berhasil di tambahkan')
-            document.location.href= 'kelas.php'
+            document.location.href= 'index.php'
         </script>
         ";
         } else {
@@ -27,7 +27,15 @@ if (!isset($_SESSION['level'])) {
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
+    <?php include "../../inc/head.php" ?>
+    <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+    <?php include "../../inc/navbar.php" ?> 
+
+    <?php include "../../inc/sidebar.php" ?> 
+
+
+    <!-- <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>tambah siswa</title>
@@ -53,6 +61,72 @@ if (!isset($_SESSION['level'])) {
         </form>
         <br>
         <a href="kelas.php">kembali</a>
-    </body>
+    </body> -->
+        <!-- Main content -->
+    <section class="content-wrapper">
+            <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div cla  ss="col-sm-6">
+            <h1 class="m-0">Tambah Kelas</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-9">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Tambah Kelas</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Masukkan Kelas Baru</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form action="" method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="kode">Kode</label>
+                    <input type="text" name="kode" class="form-control" id="kode" value="MP00<?= $kode_siswa['id']+1 ;?>" autocomplete="off" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <input type="text" name="kelas" class="form-control" id="kelas" placeholder="Nama Kelas" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label for="harga">Harga</label>
+                    <input type="number" name="harga" class="form-control" id="harga" placeholder="Harga Kelas" autocomplete="off">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary" name="submit">Tambah</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
 
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+
+
+    </section>
+    <!-- /.content -->
+    <?php include "../../inc/script.php" ?>
     </html>

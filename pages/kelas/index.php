@@ -32,7 +32,7 @@ if (isset($_POST["cari"])) {
 
   <!-- Main Sidebar Container -->
   <?php include "../../inc/sidebar.php"?>
-
+  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -40,12 +40,13 @@ if (isset($_POST["cari"])) {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Tabel Pelajar</h1>
+            <h1 class="m-0">Daftar Kelas</h1>
+            <a href="tambah_kelas.php"class="btn btn-dark mt-3">Tambah Kelas</a>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v3</li>
+              <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
+              <li class="breadcrumb-item active">Daftar Kelas</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -59,25 +60,15 @@ if (isset($_POST["cari"])) {
         <div class="row">
           <div class="col-lg-10">
             <!-- /.card -->
-            <div class="card">
-              <div class="card-header border-0">
-                <h3 class="card-title">Daftar Kelas</h3>
-                <div class="card-tools">
-                  <a href="#" class="btn btn-tool btn-sm">
-                    <i class="fas fa-download"></i>
-                  </a>
-                  <a href="#" class="b	tn btn-tool btn-sm">
-                    <i class="fas fa-bars"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="card-body table-responsive p-0">
+            <div class="card ">  
+              <div class="card-body table-responsive p-0 ">
                 <table class="table table-striped table-valign-middle">
-                  <thead>
+                  <thead class>
                   <tr>
                     <th>No</th>
                     <th>Kode</th>
                     <th>Kelas</th>
+                    <th>harga</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -88,8 +79,8 @@ if (isset($_POST["cari"])) {
                 <td><?= $row["nama_kelas"]; ?></td>
                 <td>Rp.<?= $row["harga"]; ?></td>
                 <td>
-                    <a href="edit.php?id=<?= $row["id"];?>">edit</a>
-                    <a href="hapus_kelas.php?id=<?= $row["id"];?>" onclick="return confirm('hapus?');">hapus</a>
+                    <a class="btn btn-primary" href="edit.php?id=<?= $row["id"];?>">edit</a>
+                    <a class="btn btn-danger" href="hapus_kelas.php?id=<?= $row["id"];?>" onclick="return confirm('hapus?');">hapus</a>
                 </td>
             </tr>
             <?php $no ++; ?>
@@ -129,6 +120,6 @@ if (isset($_POST["cari"])) {
 
 <!-- REQUIRED SCRIPTS -->
 
-<?php include "../../../inc/script.php"  ?>
+<?php include "../../inc/script.php"  ?>
 </body>
 </html>

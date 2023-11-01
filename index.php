@@ -2,9 +2,9 @@
 
 session_start();
 if (!isset($_SESSION['level'])) {
-    header("Location: autentikasi/login.php");
+    header("Location:pages/autentikasi/login.php");
 } elseif ($_SESSION['level'] == "user") {
-    header("Location: ..user/halaman_user.php");
+    header("Location: ../user/halaman_user.php");
 } 
 
 require 'pages/function.php';
@@ -24,8 +24,8 @@ if (isset($_POST["cari"])) {
 
 <?php include "inc/head.php" ?>
 
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+  <body class="hold-transition sidebar-mini">
+  <div class="wrapper">
   <?php include "inc/navbar.php"?>
 
   <!-- Main Sidebar Container -->
@@ -38,7 +38,7 @@ if (isset($_POST["cari"])) {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Tabel Pelajar</h1>
+            <h1 class="m-0">Daftar Siswa</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -58,17 +58,6 @@ if (isset($_POST["cari"])) {
           <div class="col-lg-10">
             <!-- /.card -->
             <div class="card">
-              <div class="card-header border-0">
-                <h3 class="card-title">Daftar Pelajar</h3>
-                <div class="card-tools">
-                  <a href="#" class="btn btn-tool btn-sm">
-                    <i class="fas fa-download"></i>
-                  </a>
-                  <a href="#" class="btn btn-tool btn-sm">
-                    <i class="fas fa-bars"></i>
-                  </a>
-                </div>
-              </div>
               <div class="card-body table-responsive p-0">
                 <table class="table table-striped table-valign-middle">
                   <thead>
@@ -88,6 +77,8 @@ if (isset($_POST["cari"])) {
 						<td>K00<?= $row["id"]; ?></td>
 						<td><?= $row["nama"]; ?></td>
 						
+            <?php $no ++; ?>
+            
 						<?php
 							$id_kelas = $row['id_kelas'];
 							$kelas = query("SELECT nama_kelas from kelas where id = $id_kelas");
@@ -103,7 +94,6 @@ if (isset($_POST["cari"])) {
 						</td>
 						<?php endforeach; ?>
 					</tr>
-          <?php $no ++; ?>
                   </tbody>
                 </table>
               </div>

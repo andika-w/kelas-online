@@ -11,3 +11,5 @@
 <script src="<?= $url ?>dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= $url ?>dist/js/pages/dashboard3.js"></script>
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/c5151f1c93.js" crossorigin="anonymous"></script>

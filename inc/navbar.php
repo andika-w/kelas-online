@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-primary navbar-dark">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -30,9 +30,6 @@
             </div>
           </form>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link "href="<?= $url ?>pages/autentikasi/logout.php">Logout</a>
       </li>
 
 
